@@ -3,7 +3,7 @@ name: u22-int
 on:
   workflow_dispatch:
 
-obs:
+jobs:
   build:
     runs-on: ubuntu-22.04
     steps:
