@@ -1,12 +1,16 @@
-name: u22-int
+name: u24-arm-int
 
 on:
   workflow_dispatch:
 
 jobs:
   build:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04-arm
     steps:
+    - name: Test bug 1
+      run: |
+        sudo apt-get update
+        sudo apt-get install libssl-dev -y
     - uses: actions/checkout@v4
     - name: Setup tmate session
       uses: mxschmitt/action-tmate@v3
