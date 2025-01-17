@@ -7,8 +7,8 @@ jobs:
   build:
     runs-on: ubuntu-24.04-arm
     steps:
-    i- uses: actions/checkout@v4
-     - name: Ping test
+      - uses: actions/checkout@v4
+      - name: Ping test
         run: |
               sudo apt-get install -yqq hostname iputils-ping
               hostname
@@ -17,6 +17,6 @@ jobs:
         run: lscpu
       - name: uname
         run: uname -a
-    - name: Setup tmate session
-      uses: mxschmitt/action-tmate@v3
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
 
