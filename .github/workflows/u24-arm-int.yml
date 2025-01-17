@@ -7,11 +7,16 @@ jobs:
   build:
     runs-on: ubuntu-24.04-arm
     steps:
-    - name: Test bug 1
-      run: |
-        sudo apt-get update
-        sudo apt-get install libssl-dev -y
-    - uses: actions/checkout@v4
+    i- uses: actions/checkout@v4
+     - name: Ping test
+        run: |
+              sudo apt-get install -yqq hostname iputils-ping
+              hostname
+              ping -c 4 `hostname`
+      - name: cpu info
+        run: lscpu
+      - name: uname
+        run: uname -a
     - name: Setup tmate session
       uses: mxschmitt/action-tmate@v3
 

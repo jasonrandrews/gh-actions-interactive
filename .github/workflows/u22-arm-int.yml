@@ -7,7 +7,15 @@ jobs:
   build:
     runs-on: ubuntu-22.04-arm
     steps:
-    - uses: actions/checkout@v4
-    - name: Setup tmate session
-      uses: mxschmitt/action-tmate@v3
-
+      - uses: actions/checkout@v4
+      - name: Ping test
+        run: |
+              sudo apt-get install -yqq hostname iputils-ping
+              hostname
+              ping -c 4 `hostname`
+      - name: cpu info
+        run: lscpu
+      - name: uname
+        run: uname -a
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
