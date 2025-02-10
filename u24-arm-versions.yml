@@ -1,0 +1,18 @@
+name: u24-arm-versions
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04-arm
+    steps:
+      - name: rust version
+        run: rustc --version
+      - name: npm version
+        run: npm --version
+      - name: cpu info
+        run: lscpu
+      - name: uname
+        run: uname -a
+
