@@ -8,8 +8,16 @@ jobs:
     runs-on: ubuntu-24.04-arm
     steps:
       - name: rust version
+        continue-on-error: true
+        run: rustc --version
+      - name: rust version
+        continue-on-error: true
         run: rustc --version
       - name: npm version
+        continue-on-error: true
+        run: npm --version
+      - name: npm version
+        continue-on-error: true
         run: npm --version
       - name: cpu info
         run: lscpu
