@@ -10,6 +10,10 @@ jobs:
       - uses: actions/checkout@v4
       - name: cpu info
         run: lscpu
+      - name: npm versoin
+        run: npm --version
+      - name: rust version
+        run: rustc --version
       - name: uname
         run: uname -a
       - name: Setup tmate session
