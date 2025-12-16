@@ -9,7 +9,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Set up Homebrew
-      uses: Homebrew/actions/setup-homebrew@v4  
+      uses: Homebrew/actions/setup-homebrew@master
     - name: Install a package using brew
       run: brew install gcc
     - name: Setup tmate session
